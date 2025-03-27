@@ -1,0 +1,245 @@
+/* Import our Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Header section: centers our logo and title */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Logo: fixed width keeps it from taking up too much space */
+.logo {
+  width: 120px;
+  height: auto;
+  margin-right: 15px;
+}
+
+/* Global body styles: set our font, light background, and smooth transitions */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode for the body: darker background with light text */
+body.dark {
+  background: #2d2d2d;
+  color: #f1f1f1;
+}
+
+/* Main container: a centered card with padding and a soft box shadow */
+.app-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* In dark mode, the container blends into the dark background */
+body.dark .app-container {
+  background: #2d2d2d;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Title styles */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Controls (search & sort): default to a column layout */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Search input styling */
+.controls input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+/* Sort controls: items spaced out in a row */
+.sort-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Sort labels: clear, dark text in light mode */
+.sort-controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Select dropdown styling */
+.sort-controls select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* User list: reset list styling */
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each user card: light background, subtle border and shadow */
+.user-item {
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, transform 0.2s ease;
+  padding: 10px;
+}
+
+/* Hover effect on user card: slight lift and light tint */
+.user-item:hover {
+  background: #fdf1ef;
+  transform: translateY(-2px);
+}
+
+/* User header: aligns icon, name, and email nicely */
+.user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* User icon in Sonatus red */
+.user-icon {
+  font-size: 1.2rem;
+  color: #E53120;
+}
+
+/* User name: bold and in our signature red */
+.user-name {
+  font-weight: 700;
+  margin-left: 10px;
+  color: #E53120;
+  flex-grow: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* User email: dark text for clarity in light mode */
+.user-email {
+  font-size: 0.9rem;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Dropdown for extra user details: card-like with padding and shadow */
+.user-details-dropdown {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Error message: simple red text */
+.error {
+  color: red;
+}
+
+/* Labels inside details (like "Email:"): in Sonatus red for emphasis */
+.info-label {
+  color: #E53120;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Responsive adjustments: switch controls to row on wider screens */
+@media (min-width: 600px) {
+  .controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .controls input {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+/* Dark mode inputs and selects: darker backgrounds with light text */
+body.dark input,
+body.dark select {
+  background: #444;
+  color: #f1f1f1;
+  border: 1px solid #666;
+}
+
+/* Dark mode user cards: darker background and borders */
+body.dark .user-item {
+  background: #3a3a3a;
+  border: 1px solid #555;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode hover for user cards: slightly lighter shade */
+body.dark .user-item:hover {
+  background: #363636;
+}
+
+/* Dark mode details dropdown: match dark theme */
+body.dark .user-details-dropdown {
+  background: #3a3a3a;
+  border: 1px solid #555;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode user email: lighter gray for readability */
+body.dark .user-email {
+  color: #ccc;
+}
+
+/* Dark mode sort control labels: lighter text */
+body.dark .sort-controls label {
+  color: #ccc;
+}
+
+/* Dark mode toggle button: stays in Sonatus red with hover effect */
+.dark-mode-toggle {
+  margin-left: 20px;
+  padding: 8px 12px;
+  background: #E53120;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Toggle button hover effect */
+.dark-mode-toggle:hover {
+  background: #c12b1b;
+}
