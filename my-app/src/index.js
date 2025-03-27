@@ -4,10 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // Import our main App component
 import App from './App';
-// If you have global styles, you can import them here
-// import './index.css';
 
-// Get the root element from our HTML where our app will live
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // Render our App inside StrictMode to help catch potential issues

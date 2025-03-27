@@ -55,3 +55,23 @@ cd your-repo
 ```
 
 The app will be live at: http://localhost:3000
+
+
+---
+
+## Usage
+
+- **Search Users:** Type in the search bar to filter the user list by name or email.
+- **Sort Users:** Use the dropdowns to sort by name or email in ascending or descending order.
+- **View Details:** Click on a user’s name (or header) to toggle a drop-down box with additional information.
+- **Dark Mode:** Click the dark mode toggle button in the header to switch between light and dark themes.
+
+---
+
+## Testing
+
+To run tests, use:
+
+```bash
+npm test
+```
